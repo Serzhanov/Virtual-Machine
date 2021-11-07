@@ -38,7 +38,7 @@ int compiling_src(const char *output_file,const char *input_file){
 
 int main(int argc,char **argv){
   printf("First argument is ARM code ,second argument is machine code\n");
-  if(argc<2){
+  if(argc<3){
     printf("The rights havent been respected ,so programm will use main.vm as 1 arg and main.vme as 2 arg\n");
     compiling_src("main.vme","main.vm");//virtual machine executable/source
     printf("%d\n",run_exc("main.vme"));//resultat
