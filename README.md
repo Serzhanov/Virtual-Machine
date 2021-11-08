@@ -40,7 +40,7 @@ LABEL->just a mark
 
 HLT->end of code
 
-# EXEMPLE FIBONACCI
+# EXEMPLE FIBONACCI of 10
 
 LABEL start
 
