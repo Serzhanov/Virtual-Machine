@@ -43,39 +43,73 @@ HLT->end of code
 # EXEMPLE FIBONACCI
 
 LABEL start
+
 @ A
+
   PUSH 10
+  
   CALL fact
+  
   JMP end
+  
 LABEL end
+
   POP
+  
   HLT
+  
 LABEL fact
+
   @ B = A 
+  
   LOAD $-2
+  
 @ if B < 2
+
   PUSH 2
+  
   LOAD $-2
+  
   LT _clfact
+  
 LABEL _fact
+
   @ B = B-1
+  
   PUSH 1
+  
   LOAD $-2
+  
   SUB
+  
   STORE $-2 $-1
+  
   POP
+  
   @ A = A * B
+  
   LOAD $-3
+  
   LOAD $-2
+  
   MUL
+  
   STORE $-4 $-1
+  
   POP
+  
   @ if B>1
+  
   PUSH 1
+  
   LOAD $-2
+  
   GT _fact
+  
 LABEL _clfact
+
   POP
+  
   RETURN
   
   # BYTE CODE
