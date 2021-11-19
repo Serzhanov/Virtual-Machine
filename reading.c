@@ -145,7 +145,7 @@ int reading_exc(FILE *input){
         u_int8_t bytes[4];
         fscanf(input,"%c%c%c%c",&bytes[0],&bytes[1],&bytes[2],&bytes[3]);
         u_int32_t number=join_8bits_to32(bytes);
-        push(stack,(int)number);
+        push(stack,number);
       }
       break;
       case POP:{
@@ -229,7 +229,7 @@ int reading_exc(FILE *input){
         if((int)index2<0){
           index2=size_stack(stack)+index2;
         }
-        set_stack(stack,(int)index1,get_stack(stack,(int)index2));
+        set_stack(stack,index1,get_stack(stack,index2));
       }
       break;    
       case LOAD:{
@@ -240,7 +240,7 @@ int reading_exc(FILE *input){
         if ((int)index<0){
           index=size_stack(stack)+index;
         }
-        push(stack,get_stack(stack,(int)index));
+        push(stack,get_stack(stack,index));
       }
       break;
       case CALL:{ 
