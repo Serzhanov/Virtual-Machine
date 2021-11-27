@@ -127,14 +127,3 @@ void ht_aff(ht_t *hashtable){
 
 
 
-/*int main(int argc, char**agrv){
-  ht_t *ht = ht_create();
-  ht_set(ht, "name", "Pidor");
-  char *c = ht_get(ht, "name");
-  printf("%s\n", c);
-  
-  
-  return 0;
-
-
-}*/
